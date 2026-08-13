@@ -17,7 +17,7 @@ This project builds a complete analytics pipeline: designing a normalized Postgr
 
 - **PostgreSQL** — relational schema design, data storage
 - **Python (pandas, SQLAlchemy)** — data cleaning, transformation, and loading
-- **SQL** — business question analysis (joins, aggregations, window functions)
+- **SQL** — business question analysis (multi-table joins, aggregations, subqueries)
 - **Tableau Public** — interactive dashboard
 
 ## Key Findings
@@ -37,15 +37,14 @@ This project builds a complete analytics pipeline: designing a normalized Postgr
 
 ## Dashboard
 
-[View the interactive Tableau dashboard]
-(https://public.tableau.com/app/profile/abhishek.ravikumar8688/viz/OlistE-CommerceAnalytics_17865833504340/OlistE-CommerceAnalyticsDashboard)
+[View the interactive Tableau dashboard](https://public.tableau.com/app/profile/abhishek.ravikumar8688/viz/OlistE-CommerceAnalytics_17865833504340/OlistE-CommerceAnalyticsDashboard)
 
 ## Files
 
 - `schema.sql` — full PostgreSQL schema (9 tables, primary/foreign keys, constraints)
 - `business_questions.sql` — SQL queries answering the four business questions
 - `Ecommerce_pipeline.ipynb` — data cleaning, validation, and loading pipeline
-- `tableau exports/` - CSV exports of query results used to build the Tableau dashboard
+- `tableau exports/` — CSV exports of query results used to build the Tableau dashboard
 
 ## Dataset
 
