@@ -13,6 +13,7 @@ summaries.json (from s1b_generate_summaries.py) in the same folder.
 """
 
 import json
+import os
 import streamlit as st
 import streamlit.components.v1 as components
 import chromadb
@@ -84,7 +85,10 @@ def load_rag_system():
         documents=summaries,
         ids=[f"summary_{i}" for i in range(len(summaries))]
     )
-    claude = anthropic.Anthropic()
+    api_key = st.secrets.get("ANTHROPIC_API_KEY", None) if hasattr(st, "secrets") else None
+    if not api_key:
+        api_key = os.environ.get("ANTHROPIC_API_KEY")
+    claude = anthropic.Anthropic(api_key=api_key)
     return collection, claude
 
 collection, claude = load_rag_system()
