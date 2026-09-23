@@ -2,7 +2,7 @@
 
 An end-to-end data analytics project using the Olist Brazilian E-Commerce dataset — from raw CSVs to a published interactive dashboard, extended with a Retrieval-Augmented Generation (RAG) assistant for natural-language business questions.
 
-**Live app:** _(add your Streamlit Cloud URL here once deployed)_
+**Live app:** [olist-e-commerce-analytics-pipeline.streamlit.app] (https://olist-e-commerce-analytics-pipeline-72aijejfwqy7xvoohtjjgp.streamlit.app/)
 
 ## Overview
 
