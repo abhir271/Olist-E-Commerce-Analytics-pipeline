@@ -1,12 +1,12 @@
 # Olist E-Commerce Analytics Pipeline with GenAI Insights Assistant
 
-An end-to-end data analytics project using the Olist Brazilian E-Commerce dataset — from raw CSVs to a published interactive dashboard, extended with a Retrieval-Augmented Generation (RAG) assistant for natural-language business questions.
+An end-to-end data analytics project using the Olist Brazilian E-Commerce dataset from raw CSVs to a published interactive dashboard, extended with a Retrieval-Augmented Generation (RAG) assistant for natural-language business questions.
 
-**Live app:** [olist-e-commerce-analytics-pipeline.streamlit.app] (https://olist-e-commerce-analytics-pipeline-72aijejfwqy7xvoohtjjgp.streamlit.app/)
+**Live app:**  (https://olist-e-commerce-analytics-pipeline-72aijejfwqy7xvoohtjjgp.streamlit.app/)
 
 ## Overview
 
-This project builds a complete analytics pipeline: designing a normalized PostgreSQL schema, cleaning and loading ~120K real e-commerce orders, writing SQL to answer business questions, and visualizing insights in an interactive Tableau dashboard. On top of that, it adds a GenAI layer — a RAG system that lets you ask business questions in plain English and get answers grounded in the actual data, instead of writing SQL yourself.
+This project builds a complete analytics pipeline: designing a normalized PostgreSQL schema, cleaning and loading ~120K real e-commerce orders, writing SQL to answer business questions, and visualizing insights in an interactive Tableau dashboard. On top of that, it adds a GenAI layer a RAG system that lets you ask business questions in plain English and get answers grounded in the actual data, instead of writing SQL yourself.
 
 ## Business Questions Answered
 
@@ -52,9 +52,9 @@ On top of the SQL/Tableau analytics layer, this project adds a Retrieval-Augment
 1. Key business metrics are precomputed via SQL and converted into plain-English summary chunks.
 2. Those summaries are embedded locally with `sentence-transformers` and stored in a Chroma vector database.
 3. A user question is embedded and matched against the most semantically similar summary chunks.
-4. The retrieved chunks are passed to the Claude API as context, which generates a grounded answer — or honestly declines if the data doesn't support an answer, rather than guessing.
+4. The retrieved chunks are passed to the Claude API as context, which generates a grounded answer or honestly declines if the data doesn't support an answer, rather than guessing.
 
-**Validation:** Tested against a manually curated set of business questions. Initial testing (retrieving the top-2 most similar chunks) missed some in-scope answers due to a retrieval-recall gap; increasing retrieval depth to top-3 chunks resolved this. The system now correctly answers in-scope questions and correctly declines out-of-scope ones instead of hallucinating.
+**Validation:** Tested against a manually curated set of business questions. Initial testing (retrieving the top-2 most similar chunks) missed some in-scope answers due to a retrieval recall gap; increasing retrieval depth to top-3 chunks resolved this. The system now correctly answers in scope questions and correctly declines out of scope ones instead of hallucinating.
 
 ## Dashboard
 
@@ -88,7 +88,7 @@ On top of the SQL/Tableau analytics layer, this project adds a Retrieval-Augment
 **Analytics pipeline:**
 - `schema.sql` — full PostgreSQL schema (9 tables, primary/foreign keys, constraints)
 - `business_questions.sql` — SQL queries answering the four business questions
-- `Ecommerce_pipeline.ipynb` — data cleaning, validation, and loading pipeline
+- `Ecommerce_pipeline.ipynb` — data cleaning, validation and loading pipeline
 - `tableau exports/` — CSV exports of query results used to build the Tableau dashboard
 
 **GenAI / RAG layer:**
